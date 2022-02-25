@@ -39,3 +39,15 @@ sudo systemctl restart vmtoolsd
 ```
 
 ### And done, You're in full resolution --Congratulations
+
+----------------
+I got an error message when entering the command:
+sudo echo needs_root_rights=yes >>/etc/X11/Xwrapper.config
+bash: /etc/X11/Xwrapper.config: Permission denied
+
+To get around this problem I used this command instead:
+echo 'sudo needs_root_rights=yes >>/etc/X11/Xwrapper.config'
+which resulted in:
+sudo needs_root_rights=yes >>/etc/X11/Xwrapper.config
+Everything else worked like a charm. I am running Manjaro Linux XFCE as guest on Windows host under vmware workstation 16.2.2
+Thank you!
